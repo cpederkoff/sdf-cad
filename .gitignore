@@ -1,0 +1,14 @@
+/target
+.direnv
+.envrc
+visualize.scad
+marching_pyramids.scad
+*.obj
+*.stl
+*.png
+*.ply
+.mcp.json
+.claude
+CLAUDE.md
+perf.data
+perf.data.old

@@ -1,0 +1,33 @@
+[package]
+name = "sdf-cad"
+version = "0.1.0"
+edition = "2021"
+authors = ["cpederkoff"]
+license = "MIT"
+description = "SDF-based 3D mesh generation using adaptive BCC marching pyramids"
+repository = "https://github.com/cpederkoff/sdf-cad"
+
+[dependencies]
+png = "0.18.1"
+rand = "0.8"
+rayon = "1.11.0"
+dashmap = "6"
+rustc-hash = "2.1.1"
+smallvec = "1"
+wide = "0.7"
+three-d = "0.18"
+notify = "7"
+tinyfiledialogs = "3"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "sdf"
+harness = false
+
+# Separate profile for profiling (keeps release fast)
+[profile.profiling]
+inherits = "release"
+debug = true             # Full debug info for symbols
+strip = false           # Don't strip symbols
