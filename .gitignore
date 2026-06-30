@@ -6,6 +6,7 @@ marching_pyramids.scad
 *.obj
 *.stl
 *.png
+!images/*.png
 *.ply
 .mcp.json
 .claude

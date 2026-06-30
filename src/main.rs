@@ -5,7 +5,7 @@ use std::sync::mpsc;
 
 const SCAD_FILE: &str = "scene.scad";
 const MIN_DEPTH: u32 = 2;
-const MAX_DEPTH: u32 = 12;
+const MAX_DEPTH: u32 = 8;
 
 fn main() {
     let path = Path::new(SCAD_FILE);

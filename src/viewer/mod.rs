@@ -123,9 +123,9 @@ pub fn run_viewer(rx: Receiver<MeshBuilder>, open_file_tx: Option<Sender<PathBuf
                             "Mesh files",
                         ) {
                             let before = mesh.triangles.len();
-                            let mut export_mesh = mesh.clone();
-                            crate::mesh::decimate_flat(&mut export_mesh, 0.999);
-                            crate::mesh::collapse_short_edges(&mut export_mesh, 0.3);
+                            let export_mesh = mesh.clone();
+                            // crate::mesh::decimate_flat(&mut export_mesh, 0.999);
+                            // crate::mesh::collapse_short_edges(&mut export_mesh, 0.3);
                             eprintln!(
                                 "decimation: {} → {} tris (−{:.1}%)",
                                 before,

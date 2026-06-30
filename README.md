@@ -2,11 +2,15 @@
 
 SDF-based 3D mesh generation using adaptive BCC (body-centered cubic) marching pyramids.
 
+![CSG difference: cube minus sphere](images/difference.png)
+
 ## Overview
 
 sdf-cad takes signed distance function (SDF) descriptions of 3D solids and produces triangle meshes. It reads an OpenSCAD-like scene description language and renders them in an interactive 3D viewer.
 
-**Pipeline:** `Solid` (SDF, negative=inside) → balanced adaptive octree → BCC marching pyramids → triangle mesh (PLY)
+**Pipeline:** `Solid` (SDF, negative=inside) → balanced adaptive octree → BCC marching pyramids → triangle mesh
+
+![Adaptive mesh refinement](images/adaptive-mesh.png)
 
 ## Features
 
